@@ -1,0 +1,1 @@
+.\fc-v2\Scripts\Activate.ps1
