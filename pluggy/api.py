@@ -44,17 +44,28 @@ class PluggyAPI:
         response.raise_for_status()
         return response.json()
 
+    ################ Endpoints ################
+
     @property
     def accounts(self):
         from pluggy.accounts import AccountsAPI
+
         return AccountsAPI()
 
     @property
     def items(self):
         from pluggy.items import ItemsAPI
+
         return ItemsAPI()
 
     @property
     def connectors(self):
         from pluggy.connectors import ConnectorsAPI
+
         return ConnectorsAPI()
+
+    @property
+    def transactions(self):
+        from pluggy.transactions import TransactionsAPI
+
+        return TransactionsAPI()
